@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,26 +8,48 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
-    body { font-family: 'Noto Sans JP', sans-serif; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #FF6B35 0%, #FFA94D 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #FF6B35 0%, #FFA94D 100%);
+      box-shadow: 0 4px 24px #FF6B3540;
+      transition: opacity 0.2s, transform 0.1s;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .icon-bg {
+      background: linear-gradient(135deg, #FF6B35 0%, #FFA94D 100%);
+    }
   </style>
 </head>
+
 <body class="bg-gray-950 text-white">
 
   <!-- Hero -->
   <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-20">
-    <p class="text-indigo-400 text-sm font-bold tracking-widest uppercase mb-4">QuickFit Timer</p>
+    <p class="text-sm font-bold tracking-widest uppercase mb-4" style="color: #FF6B35;">QuickFit Timer</p>
     <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
       ジムでダラダラしない。<br />
-      <span class="text-indigo-400">決めた時間、全力で終わる。</span>
+      <span class="gradient-text">決めた時間、全力で終わる。</span>
     </h1>
     <p class="text-gray-400 text-lg md:text-xl max-w-xl mb-10">
-      イヤフォンをつけるだけ。次の種目は耳が教えてくれる。スマホを触る理由をなくした筋トレタイマー。
+      イヤフォンをつけるだけ。次の種目は音声が教えてくれる。スマホを触る理由をなくした筋トレタイマー。
     </p>
-    <a
-      href="https://timer-app-for-busy-people.vercel.app/"
-      target="_blank"
-      class="bg-indigo-500 hover:bg-indigo-400 transition text-white font-bold text-lg px-8 py-4 rounded-2xl"
-    >
+    <a href="https://timer-app-for-busy-people.vercel.app/" target="_blank" class="btn-primary text-white font-bold text-lg px-8 py-4 rounded-2xl">
       今日のメニューを作る →
     </a>
   </section>
@@ -59,9 +82,10 @@
       <p class="text-gray-400 text-center mb-12">スマホを触らなくていい仕組みをつくった</p>
       <div class="space-y-6">
         <div class="flex items-start gap-6">
-          <div class="bg-indigo-500 rounded-xl p-3 shrink-0">
+          <div class="icon-bg rounded-xl p-3 shrink-0">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
             </svg>
           </div>
           <div>
@@ -70,9 +94,10 @@
           </div>
         </div>
         <div class="flex items-start gap-6">
-          <div class="bg-indigo-500 rounded-xl p-3 shrink-0">
+          <div class="icon-bg rounded-xl p-3 shrink-0">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
           <div>
@@ -81,9 +106,9 @@
           </div>
         </div>
         <div class="flex items-start gap-6">
-          <div class="bg-indigo-500 rounded-xl p-3 shrink-0">
+          <div class="icon-bg rounded-xl p-3 shrink-0">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           </div>
           <div>
@@ -101,17 +126,17 @@
       <h2 class="text-2xl md:text-3xl font-black mb-12">3ステップで始まる</h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div>
-          <div class="text-5xl font-black text-indigo-400 mb-4">1</div>
+          <div class="text-5xl font-black gradient-text mb-4">1</div>
           <h3 class="font-bold mb-2">部位と時間を選ぶ</h3>
           <p class="text-gray-400 text-sm">鍛えたい部位と今日使える時間を選択</p>
         </div>
         <div>
-          <div class="text-5xl font-black text-indigo-400 mb-4">2</div>
+          <div class="text-5xl font-black gradient-text mb-4">2</div>
           <h3 class="font-bold mb-2">AIがメニュー生成</h3>
           <p class="text-gray-400 text-sm">時間ぴったりのルーティンを自動作成</p>
         </div>
         <div>
-          <div class="text-5xl font-black text-indigo-400 mb-4">3</div>
+          <div class="text-5xl font-black gradient-text mb-4">3</div>
           <h3 class="font-bold mb-2">イヤフォンして終わるだけ</h3>
           <p class="text-gray-400 text-sm">耳に任せてスマホを置いたまま全力で終わる</p>
         </div>
@@ -123,11 +148,8 @@
   <section class="py-24 px-6 text-center">
     <h2 class="text-3xl md:text-4xl font-black mb-4">今日、ダラダラ筋トレをやめよう</h2>
     <p class="text-gray-400 mb-10">無料。アカウント登録するだけで使えます。</p>
-    <a
-      href="https://timer-app-for-busy-people.vercel.app/"
-      target="_blank"
-      class="bg-indigo-500 hover:bg-indigo-400 transition text-white font-bold text-lg px-10 py-4 rounded-2xl"
-    >
+    <a href="https://timer-app-for-busy-people.vercel.app/" target="_blank"
+      class="btn-primary text-white font-bold text-lg px-10 py-4 rounded-2xl inline-block">
       今日のメニューを作る →
     </a>
   </section>
@@ -137,4 +159,5 @@
   </footer>
 
 </body>
+
 </html>
